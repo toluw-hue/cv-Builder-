@@ -23,12 +23,12 @@ export default function HomePage() {
       <nav className="border-b border-gray-800 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center">
               <span className="font-bold text-xs">CV</span>
             </div>
             <span className="font-bold text-lg">CV Builder Pro</span>
           </div>
-          <Link href="/builder" className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl text-sm font-semibold transition-all">
+          <Link href="/builder" className="flex items-center gap-2 px-5 py-2.5 bg-teal-600 hover:bg-teal-500 rounded-xl text-sm font-semibold transition-all">
             Start Building <ArrowRight size={16} />
           </Link>
         </div>
@@ -36,13 +36,13 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full px-4 py-1.5 text-sm text-indigo-400 mb-6">
+        <div className="inline-flex items-center gap-2 bg-teal-500/10 border border-teal-500/30 rounded-full px-4 py-1.5 text-sm text-teal-400 mb-6">
           <Star size={14} fill="currentColor" /> Better than LinkedIn's CV builder
         </div>
         <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
           Build a CV That
           <br />
-          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-teal-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
             Gets You Hired
           </span>
         </h1>
@@ -53,7 +53,7 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
             href="/builder"
-            className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-2xl text-lg font-bold transition-all shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 rounded-2xl text-lg font-bold transition-all shadow-2xl shadow-teal-500/30 hover:shadow-teal-500/50 hover:-translate-y-0.5"
           >
             Build My CV Free <ArrowRight size={20} />
           </Link>
@@ -119,7 +119,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {STEPS.map(step => (
             <div key={step.num} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-black text-white">{step.num}</span>
               </div>
               <h3 className="font-bold text-lg mb-2">{step.title}</h3>
@@ -146,24 +146,24 @@ export default function HomePage() {
 
       {/* Install CTA */}
       <section className="max-w-6xl mx-auto px-6 py-12">
-        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-500/30 rounded-3xl p-10 text-center">
+        <div className="bg-gradient-to-r from-teal-600/20 to-cyan-600/20 border border-teal-500/30 rounded-3xl p-10 text-center">
           <h2 className="text-3xl font-bold mb-3">Install on Any Device</h2>
           <p className="text-gray-400 mb-6">CV Builder Pro is a Progressive Web App — install it like a native app. No app store needed.</p>
           <div className="flex justify-center gap-8 mb-8 text-gray-300">
             <div className="flex flex-col items-center gap-2">
-              <Smartphone size={28} className="text-indigo-400" />
+              <Smartphone size={28} className="text-teal-400" />
               <span className="text-sm">Android</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Smartphone size={28} className="text-indigo-400" />
+              <Smartphone size={28} className="text-teal-400" />
               <span className="text-sm">iOS</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Monitor size={28} className="text-indigo-400" />
+              <Monitor size={28} className="text-teal-400" />
               <span className="text-sm">Windows</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Tablet size={28} className="text-indigo-400" />
+              <Tablet size={28} className="text-teal-400" />
               <span className="text-sm">Tablet</span>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
         <p className="text-gray-400 mb-8">Join thousands of Nigerians who built their career with CV Builder Pro</p>
         <Link
           href="/builder"
-          className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-2xl text-lg font-bold transition-all shadow-2xl shadow-indigo-500/30 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 rounded-2xl text-lg font-bold transition-all shadow-2xl shadow-teal-500/30 hover:-translate-y-0.5"
         >
           <Download size={20} /> Build My CV Now — Free
         </Link>

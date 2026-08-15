@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useCVContext } from "@/context/CVContext";
@@ -80,8 +80,8 @@ export default function PaymentModal({ onClose, onSuccess }: PaymentModalProps) 
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-indigo-600/20 rounded-xl flex items-center justify-center">
-              <CreditCard size={20} className="text-indigo-400" />
+            <div className="w-10 h-10 bg-teal-600/20 rounded-xl flex items-center justify-center">
+              <CreditCard size={20} className="text-teal-400" />
             </div>
             <div>
               <h2 className="text-white font-bold text-lg">Download Your CV</h2>
@@ -94,7 +94,7 @@ export default function PaymentModal({ onClose, onSuccess }: PaymentModalProps) 
         </div>
 
         {/* Price Card */}
-        <div className="mx-6 mt-5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-4 flex items-center justify-between">
+        <div className="mx-6 mt-5 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-xl p-4 flex items-center justify-between">
           <div>
             <p className="text-white/70 text-xs">One-time download</p>
             <p className="text-white text-3xl font-bold">₦500</p>
@@ -124,7 +124,7 @@ export default function PaymentModal({ onClose, onSuccess }: PaymentModalProps) 
               value={name}
               onChange={e => setName(e.target.value)}
               placeholder="John Doe"
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -135,7 +135,7 @@ export default function PaymentModal({ onClose, onSuccess }: PaymentModalProps) 
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="john@example.com"
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -145,14 +145,14 @@ export default function PaymentModal({ onClose, onSuccess }: PaymentModalProps) 
               value={phone}
               onChange={e => setPhone(e.target.value)}
               placeholder="+234 800 000 0000"
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
           <button
             onClick={handlePayment}
             disabled={loading}
-            className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25"
+            className="w-full py-3 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white rounded-xl font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-teal-500/25"
           >
             {loading ? (
               <><Loader2 size={16} className="animate-spin" /> Processing...</>
@@ -171,3 +171,4 @@ export default function PaymentModal({ onClose, onSuccess }: PaymentModalProps) 
     </div>
   );
 }
+

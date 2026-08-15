@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useCVContext } from "@/context/CVContext";
@@ -60,14 +60,14 @@ export function ProjectsForm() {
               </div>
               <div>
                 <label className="block text-xs font-medium text-gray-300 mb-1">Description</label>
-                <textarea value={proj.description} onChange={e => updateProj(proj.id, "description", e.target.value)} placeholder="What did you build and what impact did it have?" rows={3} className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none" />
+                <textarea value={proj.description} onChange={e => updateProj(proj.id, "description", e.target.value)} placeholder="What did you build and what impact did it have?" rows={3} className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none" />
               </div>
             </div>
           )}
         </div>
       ))}
 
-      <button onClick={addProject} className="w-full py-2.5 border-2 border-dashed border-indigo-500/40 rounded-xl text-indigo-400 hover:border-indigo-500 hover:text-indigo-300 hover:bg-indigo-500/5 transition-all flex items-center justify-center gap-2 text-sm">
+      <button onClick={addProject} className="w-full py-2.5 border-2 border-dashed border-teal-500/40 rounded-xl text-teal-400 hover:border-teal-500 hover:text-teal-300 hover:bg-teal-500/5 transition-all flex items-center justify-center gap-2 text-sm">
         <Plus size={16} /> Add Project
       </button>
     </div>
@@ -131,7 +131,7 @@ export function CertificationsForm() {
         </div>
       ))}
 
-      <button onClick={addCert} className="w-full py-2.5 border-2 border-dashed border-indigo-500/40 rounded-xl text-indigo-400 hover:border-indigo-500 hover:text-indigo-300 hover:bg-indigo-500/5 transition-all flex items-center justify-center gap-2 text-sm">
+      <button onClick={addCert} className="w-full py-2.5 border-2 border-dashed border-teal-500/40 rounded-xl text-teal-400 hover:border-teal-500 hover:text-teal-300 hover:bg-teal-500/5 transition-all flex items-center justify-center gap-2 text-sm">
         <Plus size={16} /> Add Certification
       </button>
     </div>
@@ -163,16 +163,16 @@ export function LanguagesForm() {
           onChange={e => setName(e.target.value)}
           onKeyDown={e => e.key === "Enter" && addLanguage()}
           placeholder="Language name"
-          className="flex-1 bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="flex-1 bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
         <select
           value={proficiency}
           onChange={e => setProficiency(e.target.value as Language["proficiency"])}
-          className="bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
         >
           {PROFICIENCY_LEVELS.map(l => <option key={l} value={l}>{l}</option>)}
         </select>
-        <button onClick={addLanguage} className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium transition-colors">
+        <button onClick={addLanguage} className="px-4 py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-sm font-medium transition-colors">
           <Plus size={16} />
         </button>
       </div>
@@ -208,8 +208,9 @@ function Input({ label, value, onChange, placeholder }: { label: string; value: 
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+        className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
       />
     </div>
   );
 }
+

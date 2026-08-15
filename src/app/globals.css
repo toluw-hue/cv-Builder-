@@ -28,11 +28,11 @@ body {
   background: #1e293b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #0f766e;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #14b8a6;
 }
 
 /* Print styles for CV */

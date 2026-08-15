@@ -17,9 +17,9 @@ const TEMPLATES: { id: CVData["template"]; label: string; description: string }[
 ];
 
 const COLORS = [
-  "#6366f1", "#8b5cf6", "#ec4899", "#ef4444",
-  "#f97316", "#eab308", "#22c55e", "#14b8a6",
-  "#3b82f6", "#06b6d4", "#1e293b", "#64748b",
+  "#14b8a6", "#06b6d4", "#3b82f6", "#8b5cf6",
+  "#ec4899", "#ef4444", "#f97316", "#eab308",
+  "#22c55e", "#6366f1", "#1e293b", "#64748b",
 ];
 
 export default function CVPreview({ scale = 0.45 }: CVPreviewProps) {
@@ -43,7 +43,7 @@ export default function CVPreview({ scale = 0.45 }: CVPreviewProps) {
               onClick={() => setTemplate(t.id)}
               className={`flex-1 py-2 px-2 rounded-lg text-xs font-medium transition-all border ${
                 cvData.template === t.id
-                  ? "bg-indigo-600 border-indigo-500 text-white"
+                  ? "bg-teal-600 border-teal-500 text-white"
                   : "bg-gray-800 border-gray-700 text-gray-400 hover:border-gray-600 hover:text-gray-300"
               }`}
             >

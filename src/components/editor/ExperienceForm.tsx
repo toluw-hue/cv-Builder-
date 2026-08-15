@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useCVContext } from "@/context/CVContext";
@@ -74,8 +74,8 @@ export default function ExperienceForm() {
             onClick={() => setExpanded(expanded === exp.id ? null : exp.id)}
           >
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-indigo-600/20 rounded-md flex items-center justify-center">
-                <Briefcase size={12} className="text-indigo-400" />
+              <div className="w-6 h-6 bg-teal-600/20 rounded-md flex items-center justify-center">
+                <Briefcase size={12} className="text-teal-400" />
               </div>
               <div>
                 <p className="text-sm font-medium text-white">{exp.position || `Experience ${idx + 1}`}</p>
@@ -101,7 +101,7 @@ export default function ExperienceForm() {
                 <div>
                   {!exp.current && <Input label="End Date" value={exp.endDate} onChange={v => updateExp(exp.id, "endDate", v)} placeholder="Dec 2023" />}
                   <label className="flex items-center gap-2 mt-2 cursor-pointer">
-                    <input type="checkbox" checked={exp.current} onChange={e => updateExp(exp.id, "current", e.target.checked)} className="accent-indigo-500" />
+                    <input type="checkbox" checked={exp.current} onChange={e => updateExp(exp.id, "current", e.target.checked)} className="accent-teal-500" />
                     <span className="text-xs text-gray-300">Currently working here</span>
                   </label>
                 </div>
@@ -114,14 +114,14 @@ export default function ExperienceForm() {
                   onChange={e => updateExp(exp.id, "description", e.target.value)}
                   placeholder="Brief overview of your role and responsibilities..."
                   rows={3}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
                 />
               </div>
 
               <div>
                 <div className="flex justify-between items-center mb-2">
                   <label className="text-xs font-medium text-gray-300">Key Achievements</label>
-                  <button onClick={() => addAchievement(exp.id)} className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                  <button onClick={() => addAchievement(exp.id)} className="text-xs text-teal-400 hover:text-teal-300 flex items-center gap-1">
                     <Plus size={12} /> Add
                   </button>
                 </div>
@@ -131,7 +131,7 @@ export default function ExperienceForm() {
                       value={a}
                       onChange={e => updateAchievement(exp.id, i, e.target.value)}
                       placeholder="e.g. Increased sales by 30%..."
-                      className="flex-1 bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="flex-1 bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
                     />
                     <button onClick={() => removeAchievement(exp.id, i)} className="text-gray-500 hover:text-red-400 transition-colors">
                       <Trash2 size={14} />
@@ -146,7 +146,7 @@ export default function ExperienceForm() {
 
       <button
         onClick={addExperience}
-        className="w-full py-2.5 border-2 border-dashed border-indigo-500/40 rounded-xl text-indigo-400 hover:border-indigo-500 hover:text-indigo-300 hover:bg-indigo-500/5 transition-all flex items-center justify-center gap-2 text-sm"
+        className="w-full py-2.5 border-2 border-dashed border-teal-500/40 rounded-xl text-teal-400 hover:border-teal-500 hover:text-teal-300 hover:bg-teal-500/5 transition-all flex items-center justify-center gap-2 text-sm"
       >
         <Plus size={16} /> Add Experience
       </button>
@@ -162,8 +162,9 @@ function Input({ label, value, onChange, placeholder }: { label: string; value: 
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+        className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
       />
     </div>
   );
 }
+

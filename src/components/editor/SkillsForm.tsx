@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useCVContext } from "@/context/CVContext";
@@ -7,7 +7,7 @@ import { Plus, Trash2, Zap } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 
 const SKILL_LEVELS: Skill["level"][] = ["Beginner", "Intermediate", "Advanced", "Expert"];
-const LEVEL_COLORS = { Beginner: "bg-gray-500", Intermediate: "bg-blue-500", Advanced: "bg-indigo-500", Expert: "bg-purple-500" };
+const LEVEL_COLORS = { Beginner: "bg-gray-500", Intermediate: "bg-blue-500", Advanced: "bg-teal-500", Expert: "bg-cyan-600" };
 
 const SUGGESTED_CATEGORIES = ["Technical", "Design", "Management", "Communication", "Languages", "Tools", "Other"];
 
@@ -47,26 +47,26 @@ export default function SkillsForm() {
             onChange={e => setNewSkill(s => ({ ...s, name: e.target.value }))}
             onKeyDown={e => e.key === "Enter" && addSkill()}
             placeholder="Skill name"
-            className="col-span-1 bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="col-span-1 bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
           <select
             value={newSkill.level}
             onChange={e => setNewSkill(s => ({ ...s, level: e.target.value as Skill["level"] }))}
-            className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
           >
             {SKILL_LEVELS.map(l => <option key={l} value={l}>{l}</option>)}
           </select>
           <select
             value={newSkill.category}
             onChange={e => setNewSkill(s => ({ ...s, category: e.target.value }))}
-            className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
           >
             {SUGGESTED_CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
         </div>
         <button
           onClick={addSkill}
-          className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
+          className="w-full py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
         >
           <Plus size={14} /> Add Skill
         </button>
@@ -107,3 +107,4 @@ export default function SkillsForm() {
     </div>
   );
 }
+

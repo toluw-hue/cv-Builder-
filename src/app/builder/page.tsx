@@ -106,7 +106,7 @@ export default function BuilderPage() {
       {/* Top Navbar */}
       <header className="bg-gray-900 border-b border-gray-800 px-4 py-3 flex items-center justify-between flex-shrink-0 z-10">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-xs">CV</span>
           </div>
           <div>
@@ -124,7 +124,7 @@ export default function BuilderPage() {
             <div className="w-24 bg-gray-800 rounded-full h-1.5">
               <div
                 className="h-1.5 rounded-full transition-all duration-500"
-                style={{ width: `${completeness}%`, backgroundColor: completeness === 100 ? "#22c55e" : "#6366f1" }}
+                style={{ width: `${completeness}%`, backgroundColor: completeness === 100 ? "#22c55e" : "#14b8a6" }}
               />
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function BuilderPage() {
           <button
             onClick={handleDownload}
             disabled={downloading}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl text-sm font-semibold transition-all shadow-lg shadow-indigo-500/25 disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white rounded-xl text-sm font-semibold transition-all shadow-lg shadow-teal-500/25 disabled:opacity-50"
           >
             {downloading ? (
               <><Loader2 size={14} className="animate-spin" /> Generating...</>
@@ -177,7 +177,7 @@ export default function BuilderPage() {
                   onClick={() => { setActiveSection(section.id); setShowPreviewMobile(false); }}
                   className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-left transition-all ${
                     isActive
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-teal-600 text-white"
                       : "text-gray-400 hover:text-white hover:bg-gray-800"
                   }`}
                 >

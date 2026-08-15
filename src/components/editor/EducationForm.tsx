@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useCVContext } from "@/context/CVContext";
@@ -80,7 +80,7 @@ export default function EducationForm() {
                 <div>
                   {!edu.current && <Input label="End Date" value={edu.endDate} onChange={v => updateEdu(edu.id, "endDate", v)} placeholder="Jun 2022" />}
                   <label className="flex items-center gap-2 mt-2 cursor-pointer">
-                    <input type="checkbox" checked={edu.current} onChange={e => updateEdu(edu.id, "current", e.target.checked)} className="accent-indigo-500" />
+                    <input type="checkbox" checked={edu.current} onChange={e => updateEdu(edu.id, "current", e.target.checked)} className="accent-teal-500" />
                     <span className="text-xs text-gray-300">Currently studying</span>
                   </label>
                 </div>
@@ -94,7 +94,7 @@ export default function EducationForm() {
                   onChange={e => updateEdu(edu.id, "description", e.target.value)}
                   placeholder="Awards, relevant coursework, activities..."
                   rows={2}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
                 />
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function EducationForm() {
 
       <button
         onClick={addEducation}
-        className="w-full py-2.5 border-2 border-dashed border-indigo-500/40 rounded-xl text-indigo-400 hover:border-indigo-500 hover:text-indigo-300 hover:bg-indigo-500/5 transition-all flex items-center justify-center gap-2 text-sm"
+        className="w-full py-2.5 border-2 border-dashed border-teal-500/40 rounded-xl text-teal-400 hover:border-teal-500 hover:text-teal-300 hover:bg-teal-500/5 transition-all flex items-center justify-center gap-2 text-sm"
       >
         <Plus size={16} /> Add Education
       </button>
@@ -120,8 +120,9 @@ function Input({ label, value, onChange, placeholder }: { label: string; value: 
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+        className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-1.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
       />
     </div>
   );
 }
+

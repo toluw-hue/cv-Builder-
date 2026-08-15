@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useCVContext } from "@/context/CVContext";
 import { User, Mail, Phone, MapPin, Globe, Linkedin, Github, FileText, Camera } from "lucide-react";
@@ -24,13 +24,13 @@ export default function PersonalInfoForm() {
       <div className="flex items-center gap-4">
         <div className="relative">
           {p.photo ? (
-            <img src={p.photo} alt="Profile" className="w-16 h-16 rounded-full object-cover border-2 border-indigo-300" />
+            <img src={p.photo} alt="Profile" className="w-16 h-16 rounded-full object-cover border-2 border-teal-300" />
           ) : (
             <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center border-2 border-dashed border-gray-500">
               <User size={24} className="text-gray-400" />
             </div>
           )}
-          <label className="absolute bottom-0 right-0 bg-indigo-600 rounded-full p-1 cursor-pointer hover:bg-indigo-500 transition-colors">
+          <label className="absolute bottom-0 right-0 bg-teal-600 rounded-full p-1 cursor-pointer hover:bg-teal-500 transition-colors">
             <Camera size={10} className="text-white" />
             <input type="file" accept="image/*" className="hidden" onChange={handlePhotoUpload} />
           </label>
@@ -59,7 +59,7 @@ export default function PersonalInfoForm() {
           onChange={e => updatePersonalInfo({ summary: e.target.value })}
           placeholder="A brief, compelling summary of your professional background, skills, and what makes you unique..."
           rows={4}
-          className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none transition-all"
+          className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none transition-all"
         />
         <p className="text-xs text-gray-500 mt-1">{p.summary.length}/500 characters</p>
       </div>
@@ -82,9 +82,10 @@ function FormField({
           value={value}
           onChange={e => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full bg-gray-800 border border-gray-600 rounded-lg pl-8 pr-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="w-full bg-gray-800 border border-gray-600 rounded-lg pl-8 pr-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
         />
       </div>
     </div>
   );
 }
+
