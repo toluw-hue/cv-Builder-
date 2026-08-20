@@ -34,6 +34,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="google-adsense-account" content="ca-pub-1051258812836481" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1051258812836481"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <CVProvider>{children}</CVProvider>
