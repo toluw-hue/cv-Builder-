@@ -45,39 +45,16 @@ export default function BuilderPage() {
   const triggerDownload = async () => {
     setDownloading(true);
     try {
-      const response = await fetch("/api/generate-pdf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(cvData),
-      });
-
-      if (!response.ok) throw new Error("PDF generation failed");
-
-      const html = await response.text();
-
-      // Open in a new window and trigger print dialog (user selects "Save as PDF")
-      const printWindow = window.open("", "_blank", "width=900,height=700");
-      if (printWindow) {
-        printWindow.document.write(html);
-        printWindow.document.close();
-        printWindow.onload = () => {
-          setTimeout(() => {
-            printWindow.print();
-          }, 500);
-        };
-      } else {
-        // Fallback: download as HTML
-        const blob = new Blob([html], { type: "text/html" });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = `${cvData.personalInfo.fullName || "My-CV"}-CV.html`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      }
-
+      const { generatePDF } = await import("@/lib/pdf/generatePDF");
+      const blob = await generatePDF(cvData);
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement("a");
+      a.href     = url;
+      a.download = `${cvData.personalInfo.fullName || "My-CV"}-CV.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
       setDownloaded(true);
       setTimeout(() => setDownloaded(false), 3000);
     } catch (err) {
